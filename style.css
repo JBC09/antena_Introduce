@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik Vinyl', cursive;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    overflow-x: hidden;
+
+}
+.wrap{
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+
+    border-top: none;
+    border-bottom: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: 0.35s;
+}
+.menu a{
+    position: relative;
+}
+.menu a::before{
+    content: '';
+    position: absolute;
+    top: -25%;
+    transform: translate(-50%,0);
+    left: 0%;
+    width: 7px;
+    height: 7px;
+    transition: 0.35s;
+    border-radius: 10px;
+    background-color: crimson;
+}
+.menu a:hover::before{
+    left: 100%;
+}
+header{
+    width: 100%;
+    padding: 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #e8e8e8;
+    margin-bottom: 50px;
+}
+.logo{
+    font-size: 28px;
+    position: relative;
+    cursor: pointer;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: gold;
+    border-radius: 50%;
+    right: -12%;
+    transition: 0.35s;
+}
+.logo:hover::before{
+    background-color: teal;
+}
+nav{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.login{
+    color: crimson;
+    padding: 5px;
+    border: 2px solid crimson;
+}
+.login:hover span{
+    color: black;
+}
+.menu2{
+    display: none;
+}
+main{
+    background-image: url('./안테나.png');
+    background-size: cover;
+    background-position: center 40%;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 100px;
+}
+.message{ 
+    position: relative;
+}
+.message div{
+    width: 400px;
+    border: 4px solid white;
+    height: 60px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    transition: 0.35s;
+}
+.message p{
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    transition: 0.35s;
+    text-shadow: 0px 0px 5px black;
+}
+.message:hover p{
+    letter-spacing: 15px;
+    text-shadow: 0px 0px 5px crimson;
+}
+.message:hover div:nth-of-type(1){
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.message:hover div:nth-of-type(2){
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+main + h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 50%;
+    margin-bottom: 20px;
+    border-bottom: 10px dotted crimson;
+}
+h1 sub{
+    font-size: 20px;
+    color: gold;
+}
+.art{
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 20px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 3px;
+}
+.imgbox{
+    width: 250px;
+    height: 250px;
+    transition: 0.35s;
+    cursor: pointer;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgbox:hover{
+    filter: grayscale(0.5);
+    border-radius: 50%;
+}
+.imgbox img{
+    width: inherit;
+    height: inherit;
+}
+
+.imgbox p{
+    font-family: 'Humanbumsuk';
+    position: absolute;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    transform: translate(-50%,0);
+    left: 50%;
+    font-size: 30px;
+    top: 100%;
+    transition: 0.35s;
+    transition-delay: 0.5s;
+}
+
+.imgbox:hover p{
+    top: 70%;
+}
+
+input{
+    display: none;
+}
+.fa-list{
+    display: none;
+    font-size: 30px;
+    color: crimson;
+}
+
+.menu2{
+    width: 100%;
+    top: 0%;
+    left: -120%;
+    height: 100%;
+    z-index: 100000;
+    transition: 0.35s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: white;
+    padding: 25px 15px;
+    background-color: rgba(0,0,0,0.7);
+}
+.menu2 a{
+    width: 250px;
+    line-height: 50px;
+    margin-left: 40px;
+    color: white;
+    font-size: 30px;
+    border-bottom: 3px solid white;
+}
+.menu2 p{
+    color: wheat;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.menu2 i{
+    font-size: 40px;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    top: 0.5%;
+    transition: 0.35s;
+}
+.menu2 a:hover{
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+.menu2 i:hover{
+
+    transform: scale(1.2);
+}
+#list:checked + div{
+    left: 0%;
+   
+}
+
+@media screen and (max-width: 1000px) {
+    nav{
+   
+        width: 150px;
+        justify-content: space-around;
+    }
+    .menu{
+        display: none;
+    }
+    .fa-list{
+        display: block;
+        cursor: pointer;
+    }   
+   
+    .imgbox{
+        width: 130px;
+        margin: 5px;
+        height: 130px;
+    }
+    .imgbox p{
+        font-size: 15px;
+    }
+    .message div{
+        width: 200px;
+        border: 3px solid white;
+        height: 30px;
+    }
+    .message p{
+        font-size: 20px;
+    }
+    .message:hover p{
+        letter-spacing: 5px;
+        text-shadow: 0px 0px 5px crimson;
+    }
+    .menu2 a{
+        font-size: 25px;
+        width: 180px;
+    }
+    .menu2 p{
+        font-size: 15px;
+    }
+   
+}
